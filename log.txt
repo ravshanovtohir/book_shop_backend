@@ -1,0 +1,7 @@
+/addproduct__POST__1656409940063__InternalServerError__Cannot destructure property 'file' of 'req.files' as it is undefined.
+/addproduct__POST__1656412266171__InternalServerError__Cannot destructure property 'file' of 'req.files' as it is null.
+/addproduct__POST__1656415530985__InternalServerError__неверный синтаксис для типа integer: "safdadf"
+/addproduct__POST__1656423391883__InternalServerError__Cannot destructure property 'file' of 'req.files' as it is undefined.
+/addproduct__POST__1656423443677__InternalServerError__Cannot destructure property 'file' of 'req.files' as it is undefined.
+/addproduct__POST__1656423541721__InternalServerError__неверный синтаксис для типа integer: "sdafasdfasdf"
+/addcategory__POST__1656484621420__InternalServerError__product_category is not defined
