@@ -11,7 +11,7 @@ import bodyParser from 'body-parser'
 // other datas
 const PORT = process.env.PORT || 5000
 const app = express()
-app.use(cors())
+    // app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(fileUpload());
@@ -38,6 +38,11 @@ import categoriesRouter from './routes/category.js'
 !async function() {
     try {
         const db = await database()
+        app.use(cors({
+            origin: "*",
+            methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+            preflightContinue: false
+        }))
         console.log(1);
         app.use((req, res, next) => {
             req.models = db.models
