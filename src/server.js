@@ -7,6 +7,7 @@ import fs from 'fs'
 import database from "./config/db.config.js"
 import mockData from "./utils/mockData.js"
 import bodyParser from 'body-parser'
+import morgan from 'morgan'
 
 // other datas
 const PORT = process.env.PORT || 5000
@@ -28,6 +29,7 @@ const corsOptions = {
     optionSuccessStatus: 200
 }
 app.use(cors(corsOptions));
+app.use(morgan("dev"));
 
 
 app.get('/', (req, res) => res.send("Hello"))
