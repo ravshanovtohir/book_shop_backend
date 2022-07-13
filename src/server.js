@@ -7,7 +7,7 @@ import fs from 'fs'
 import database from "./config/db.config.js"
 import mockData from "./utils/mockData.js"
 import bodyParser from 'body-parser'
-import morgan from 'morgan'
+
 
 // other datas
 const PORT = process.env.PORT || 5000
@@ -22,14 +22,6 @@ app.use(bodyParser.urlencoded({
     parameterLimit: 100000,
     extended: true
 }));
-
-const corsOptions = {
-    origin: 'http://localhost:2002',
-    credentials: true,
-    optionSuccessStatus: 200
-}
-app.use(cors(corsOptions));
-app.use(morgan("dev"));
 
 
 app.get('/', (req, res) => res.send("Hello"))
@@ -48,7 +40,11 @@ import categoriesRouter from './routes/category.js'
     try {
         const db = await database()
 
-
+        app.use(cors({
+            origin: "*",
+            methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+            preflightContinue: false
+        }))
 
 
         console.log(1);
@@ -57,12 +53,6 @@ import categoriesRouter from './routes/category.js'
             req.sequelize = db
             next()
         })
-
-        app.use(cors({
-            origin: "*",
-            methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-            preflightContinue: false
-        }))
 
         // initailize routes
         app.use(authRouter)
