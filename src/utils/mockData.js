@@ -11,25 +11,25 @@ export default async function({ sequelize }) {
         { category_name: 'Ertak kitoblar' },
     ])
 
-    const products = await sequelize.models.Product.bulkCreate([{
-            category_id: 1,
-            product_name: 'Ikki eshik orasi',
-            product_author: "Otkir Xoshimov",
-            product_img: 'ikki eshik orasi.jpg',
-            product_files_name: "olma",
-            product_price: 50000,
-            short_description: 'Ikki eshik orasi',
-            long_description: 'Ikki eshik orasi kitob juda yaxshi yozilgan'
-        },
-        {
-            category_id: 2,
-            product_name: 'Uch bahodir',
-            product_author: 'Xalq ogzaki ijodi',
-            product_img: 'uchbahodir.jpg',
-            product_files_name: "olma",
-            product_price: 25000,
-            short_description: 'bolalar uchun yaxshi ertak kitob',
-            long_description: 'bolalar uchun juda ajoyib kitob ekan bolalarni uxlashidan avval oqib berish uchun ham juda yaxshi'
-        }
-    ])
+//     const products = await sequelize.models.Product.bulkCreate([{
+//             category_id: 1,
+//             product_name: 'Ikki eshik orasi',
+//             product_author: "Otkir Xoshimov",
+//             product_img: 'ikki eshik orasi.jpg',
+//             product_files_name: "olma",
+//             product_price: 50000,
+//             short_description: 'Ikki eshik orasi',
+//             long_description: 'Ikki eshik orasi kitob juda yaxshi yozilgan'
+//         },
+//         {
+//             category_id: 2,
+//             product_name: 'Uch bahodir',
+//             product_author: 'Xalq ogzaki ijodi',
+//             product_img: 'uchbahodir.jpg',
+//             product_files_name: "olma",
+//             product_price: 25000,
+//             short_description: 'bolalar uchun yaxshi ertak kitob',
+//             long_description: 'bolalar uchun juda ajoyib kitob ekan bolalarni uxlashidan avval oqib berish uchun ham juda yaxshi'
+//         }
+//     ])
 }
