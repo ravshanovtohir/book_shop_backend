@@ -14,7 +14,9 @@ const PORT = process.env.PORT || 5000
 const app = express()
 
 app.use(cors({
-    origin: "https://book-shop-client.herokuapp.com"
+    origin: "https://book-shop-client.herokuapp.com",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false
 }))
 
 // app.use(cors())
