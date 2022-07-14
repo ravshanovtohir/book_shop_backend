@@ -15,8 +15,7 @@ const app = express()
 
 app.use(cors({
     origin: "https://book-shop-client.herokuapp.com",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    preflightContinue: false
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE"
 }))
 
 // app.use(cors())
