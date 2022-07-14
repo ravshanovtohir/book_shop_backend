@@ -13,11 +13,7 @@ import bodyParser from 'body-parser'
 const PORT = process.env.PORT || 5000
 const app = express()
 
-app.use(cors({
-    origin: "*",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    preflightContinue: false
-}))
+app.use(cors({ origin: '*' }))
 
 // app.use(cors())
 app.use(express.json())
