@@ -60,8 +60,8 @@ import categoriesRouter from './routes/category.js'
             // app.use(sendEmailer)
 
         // load mock data
-         await mockData({ sequelize: db })
-         console.log('Mock data was loaded successfully.')
+//          await mockData({ sequelize: db })
+//          console.log('Mock data was loaded successfully.')
     } catch (error) {
         console.log(error)
     }
